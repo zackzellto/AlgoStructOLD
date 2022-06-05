@@ -11,6 +11,7 @@
     "oidc-client": "^1.11.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.4.0",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.0",
@@ -41,7 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "nan": "^2.14.2",
-    "sass": "^1.52.1",
+    "sass": "^1.52.2",
     "typescript": "^4.2.4"
   },
   "scripts": {

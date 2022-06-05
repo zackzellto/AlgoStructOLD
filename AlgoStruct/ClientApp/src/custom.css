@@ -4,7 +4,11 @@ a {
 }
 
 code {
-  color: #E01A76;
+  color: #e01a76;
+}
+
+body {
+  background-color: rgba(216, 216, 216, 0.864);
 }
 
 .btn-primary {
@@ -12,4 +16,3 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
-

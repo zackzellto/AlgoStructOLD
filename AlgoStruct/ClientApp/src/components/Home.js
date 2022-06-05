@@ -8,7 +8,7 @@ export class Home extends Component {
     return (
       <>
         <Sidebar />
-        <div>
+        <div id="main-content">
           <h1>AlgoStruct</h1>
           <h4>a Data Structures & Algorithms</h4>
           <h2>Visualizer</h2>

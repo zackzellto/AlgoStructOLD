@@ -1,33 +1,62 @@
-import React, { Component } from "react";
-import "./Sidebar.css";
+import React from "react";
+import "./Sidebar.scss";
+import { Link } from "react-router-dom";
+import * as FaIcons from "react-icons/fa";
 
-class Sidebar extends Component {
-  render() {
-    return (
-      <nav className="sidebar">
-        <div>
-          <h3 className="sidebar-header">Contents</h3>
+const expandSidebar = () => {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main-content").style.width = "250px";
+};
+
+const closeSidebar = () => {
+  document.getElementById("sidebar").style.width = "75px";
+  document.getElementById("main-content").style.width = "75px";
+};
+
+export default function Sidebar() {
+  return (
+    <nav id="sidebar" className="sidebar">
+      <button className="close-sidebar-button" onClick={closeSidebar}></button>
+      <div>
+        <h3 className="sidebar-header">Contents</h3>
+      </div>
+      <ul>
+        <div className="sidebar-buttons">
+          <li>
+            <a href="#about">About AlgoStruct </a>
+          </li>
+          <li>
+            <a href="#algorithms">Algorithms</a>
+          </li>
+          <li>
+            <a href="#data-structures">Data Structures</a>
+          </li>
+          <li>
+            <a href="#learning">Learning</a>
+          </li>
+          <li>
+            <a href="contact">Contact</a>
+          </li>
         </div>
-        <ul>
-          <li>
-            <button href="#about">About AlgoStruct </button>
-          </li>
-          <li>
-            <button href="#algorithms">Algorithms</button>
-          </li>
-          <li>
-            <button href="#data-structures">Data Structures</button>
-          </li>
-          <li>
-            <button href="#learning">Learning</button>
-          </li>
-          <li>
-            <button href="contact">Contact</button>
-          </li>
-        </ul>
-      </nav>
-    );
-  }
+      </ul>
+      <hr className="sidebar-social-links-hr" />
+      <div className="sidebar-social-links">
+        <Link to="https://www.facebook.com">
+          <FaIcons.FaFacebook className="facebook-icon" />
+        </Link>
+        <Link to="https://www.github.com">
+          <FaIcons.FaGithub className="github-icon" />
+        </Link>
+        <Link to="https://www.twitter.com">
+          <FaIcons.FaTwitter className="twitter-icon" />
+        </Link>
+        <Link to="https://www.linkedin.com">
+          <FaIcons.FaLinkedin className="linkedin-icon" />
+        </Link>
+        <Link to="https://www.instagram.com">
+          <FaIcons.FaInstagram className="instagram-icon" />
+        </Link>
+      </div>
+    </nav>
+  );
 }
-
-export default Sidebar;
