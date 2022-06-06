@@ -16,7 +16,13 @@ const closeSidebar = () => {
 export default function Sidebar() {
   return (
     <nav id="sidebar" className="sidebar">
-      <button className="close-sidebar-button" onClick={closeSidebar}></button>
+      <div class="box">
+        <div class="btn not-active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <div>
         <h3 className="sidebar-header">Contents</h3>
       </div>
