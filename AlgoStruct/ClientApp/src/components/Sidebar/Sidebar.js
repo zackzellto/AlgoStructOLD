@@ -13,15 +13,23 @@ const closeSidebar = () => {
   document.getElementById("main-content").style.width = "75px";
 };
 
+const menuBtn = document.querySelector(".menu-btn");
+let menuOpen = false;
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove("open");
+    menuOpen = false;
+  }
+});
+
 export default function Sidebar() {
   return (
     <nav id="sidebar" className="sidebar">
-      <div class="box">
-        <div class="btn not-active">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div className="menu-btn">
+        <div className="menu-btn__burger"></div>
       </div>
       <div>
         <h3 className="sidebar-header">Contents</h3>

@@ -1,6 +1,61 @@
-.sidebar:hover{
+.menu-btn{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  
+}
+
+.menu-btn__burger {
+  width: 24px; 
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger:before,
+.menu-btn__burger:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger:before {
+  transform: translateY(-10px);
+}
+
+.menu-btn__burger:after {
+  transform: translateY(10px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-10px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger:before {
+  transform: rotate(45deg) translate(5px, -5px);
 
 }
+
+.menu-btn.open .menu-btn__burger:after {
+  transform: rotate(-45deg) translate(5px, 5px);
+ 
+}
+
+
 .sidebar {
   width: 250px;
   height: 100vh;
