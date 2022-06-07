@@ -13,23 +13,28 @@ const closeSidebar = () => {
   document.getElementById("main-content").style.width = "75px";
 };
 
-const menuBtn = document.querySelector(".menu-btn");
-let menuOpen = false;
-menuBtn.addEventListener("click", () => {
-  if (!menuOpen) {
-    menuBtn.classList.add("open");
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove("open");
-    menuOpen = false;
-  }
-});
-
 export default function Sidebar() {
+  window.onload = function () {
+    const menuBtn = document.querySelector(".menu-btn");
+    let menuOpen = false;
+    menuBtn.addEventListener("click", (e) => {
+      if (!menuOpen) {
+        menuBtn.classList.add("open");
+        document.getElementById("sidebar").style.width = "250px";
+        document.getElementById("main-content").style.width = "250px";
+        menuOpen = true;
+      } else {
+        menuBtn.classList.remove("open");
+        document.getElementById("sidebar").style.width = "75px";
+        document.getElementById("main-content").style.width = "75px";
+        menuOpen = false;
+      }
+    });
+  };
   return (
     <nav id="sidebar" className="sidebar">
       <div className="menu-btn">
-        <div className="menu-btn__burger"></div>
+        <div className="menu-btn__burger" />
       </div>
       <div>
         <h3 className="sidebar-header">Contents</h3>
