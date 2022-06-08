@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import "./Sidebar.scss";
 import SidebarExpanded from "./SidebarCollapsed";
 import SidebarCollapsed from "./SidebarExpanded";
@@ -25,6 +26,10 @@ window.onload = collapseExpandButton;
 export default function Sidebar() {
   const [isToggled, setIsToggled] = useState(false);
 
-  <div onClick={() => setIsToggled(!isToggled)}></div>;
-  return <>{isToggled ? <SidebarExpanded /> : <SidebarCollapsed />}</>;
+  return (
+    <>
+      <Button onClick={() => setIsToggled(!isToggled)}></Button>;
+      {isToggled ? <SidebarCollapsed /> : <SidebarExpanded />}
+    </>
+  );
 }

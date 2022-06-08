@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
@@ -72,7 +72,7 @@ export default function SidebarExpanded() {
         </div>
         <hr className="sidebar-social-links-hr" />
         <div className="sidebar-social-links">
-          <Link to="https://www.facebook.com">
+          <Link to="https://www.facebook.com" target="_blank">
             <FaIcons.FaFacebook className="facebook-icon" />
           </Link>
           <Link to="https://www.github.com">

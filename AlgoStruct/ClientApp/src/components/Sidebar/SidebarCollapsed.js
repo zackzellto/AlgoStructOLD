@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
 
-export default function SidebarExpanded() {
+export default function SidebarCollapsed() {
   return (
     <>
       <nav id="sidebar" className="sidebar">
@@ -11,26 +11,23 @@ export default function SidebarExpanded() {
           <div className="menu-btn__burger" />
         </div>
         <div>
-          <h3 className="sidebar-header">AlgoStruct</h3>
+          <h3 className="sidebar-header">AS</h3>
         </div>
         <ul>
           <div className="sidebar-buttons">
             <li>
               <a href="#about">
                 <FaIcons.FaQuestion className="about-icon" />
-                About AlgoStruct{" "}
               </a>
             </li>
             <li>
               <a href="#algorithms">
                 <FaIcons.FaBrain className="algorithms-icon" />
-                Algorithms
               </a>
             </li>
             <li>
               <a href="#data-structures">
                 <FaIcons.FaDatabase className="data-structures-icon" />
-                Data Structures
               </a>
             </li>
             <li>
