@@ -1,7 +1,13 @@
 import React from "react";
 
 const DataStructures = () => {
-  return <div>DataStructures Page</div>;
+  return (
+    <>
+      <div id="datastructures">DataStructures Page</div>
+
+      <div> </div>
+    </>
+  );
 };
 
 export default DataStructures;

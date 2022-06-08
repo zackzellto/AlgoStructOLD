@@ -135,7 +135,7 @@
 }
 
 .sidebar-social-links-hr{
-  margin-top: 380px;
+  margin-top: 650px;
   border-top: 1px solid #fff;
 }
 
@@ -154,6 +154,14 @@
 .sidebar-buttons{
   display: flex;
   flex-direction: column;
+}
+
+.sidebar-toggle-button{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  left: 100px;
 }
 
 .sidebar-button:hover {

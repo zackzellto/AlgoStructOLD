@@ -6,7 +6,7 @@ import * as FaIcons from "react-icons/fa";
 export default function SidebarExpanded() {
   return (
     <>
-      <nav id="sidebar" className="sidebar">
+      <nav id="sidebar" className="sidebar expanded-sidebar collapsed-sidebar">
         <div className="menu-btn">
           <div className="menu-btn__burger" />
         </div>
@@ -22,25 +22,25 @@ export default function SidebarExpanded() {
               </a>
             </li>
             <li>
-              <a href="#algorithms">
+              <a href="/algorithms">
                 <FaIcons.FaBrain className="algorithms-icon" />
                 Algorithms
               </a>
             </li>
             <li>
-              <a href="#data-structures">
+              <a href="/datastructures">
                 <FaIcons.FaDatabase className="data-structures-icon" />
                 Data Structures
               </a>
             </li>
             <li>
-              <a href="#learning">
+              <a href="/learning">
                 <FaIcons.FaBookOpen className="learning-icon" />
                 Learning
               </a>
             </li>
             <li>
-              <a href="contact">
+              <a href="#contact">
                 <FaIcons.FaEnvelopeOpen className="contact-icon" />
                 Contact
               </a>
