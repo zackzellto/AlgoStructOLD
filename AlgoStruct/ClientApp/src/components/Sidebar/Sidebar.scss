@@ -65,6 +65,7 @@ $screen-sm-min: 576px;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 20000;
   background-color: rgb(31, 94, 142);
   color: #fff;
   transition: all 0.3s;

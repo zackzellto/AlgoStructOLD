@@ -8,8 +8,8 @@ const Home = () => {
       <Sidebar />
       <div id="main-content">
         <h1>AlgoStruct</h1>
-        <h4>a Data Structures & Algorithms</h4>
-        <h2>Visualizer tool</h2>
+        <h5>a visualization tool</h5>
+        <h5>for Data Structures & Algorithms</h5>
       </div>
     </>
   );
