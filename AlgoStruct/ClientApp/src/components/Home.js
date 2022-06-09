@@ -1,19 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import Sidebar from "./Sidebar/Sidebar";
+import "./Home.scss";
 
-export class Home extends Component {
-  static displayName = Home.name;
+const Home = () => {
+  return (
+    <>
+      <Sidebar />
+      <div id="main-content">
+        <h1>AlgoStruct</h1>
+        <h4>a Data Structures & Algorithms</h4>
+        <h2>Visualizer tool</h2>
+      </div>
+    </>
+  );
+};
 
-  render() {
-    return (
-      <>
-        <Sidebar />
-        <div id="main-content">
-          <h1>AlgoStruct</h1>
-          <h4>a Data Structures & Algorithms</h4>
-          <h2>Visualizer</h2>
-        </div>
-      </>
-    );
-  }
-}
+export default Home;

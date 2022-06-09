@@ -44,26 +44,20 @@ export default function SidebarCollapsed() {
         </ul>
         <div className="sidebar-account">
           <FaIcons.FaUserNinja className="account-icon" />
-          <h4>Account</h4>
           <div className="account-text">
             <ul>
               <li>
                 <Link to="/login">
-                  <FaIcons.FaArrowRight /> Login
+                  <FaIcons.FaArrowRight className="login-icon" />
                 </Link>
               </li>
               <li>
                 <Link to="/register">
-                  <FaIcons.FaRegIdCard /> Register
+                  <FaIcons.FaRegIdCard className="logout-icon" />
                 </Link>
               </li>
             </ul>
           </div>
-
-          <Image
-            className="sidebar-account-avatar"
-            style={{ display: "none" }}
-          ></Image>
         </div>
         <hr className="sidebar-social-links-hr" />
         <div className="sidebar-social-links">

@@ -28,12 +28,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div
-        className="sidebar-toggle-button menu-btn"
-        onClick={() => setIsToggled(!isToggled)}
-      >
-        <div className="menu-btn__burger" />
-      </div>
+      <div onClick={() => setIsToggled(!isToggled)}></div>
       {isToggled ? <SidebarCollapsed /> : <SidebarExpanded />}
     </>
   );
