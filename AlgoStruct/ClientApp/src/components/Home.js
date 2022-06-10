@@ -8,9 +8,11 @@ const Home = () => {
   return (
     <>
       <SidebarNav />
-
       <Container id="main-content">
-        <h1>AlgoStruct</h1>
+        <h1>
+          <b className="left-bracket">[</b>AlgoStruct
+          <b className="right-bracket">]</b>
+        </h1>
 
         <u>
           <h5>a Data Structures & Algorithms visualization tool</h5>

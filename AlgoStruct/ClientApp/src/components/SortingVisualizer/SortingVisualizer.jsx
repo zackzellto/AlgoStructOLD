@@ -11,10 +11,10 @@ const ANIMATION_SPEED_MS = 3;
 const NUMBER_OF_ARRAY_BARS = 100;
 
 // This is the main color of the array bars.
-const PRIMARY_COLOR = "#96afd9";
+const PRIMARY_COLOR = "white";
 
 // This is the color of array bars that are being compared throughout the animations.
-const SECONDARY_COLOR = "white";
+const SECONDARY_COLOR = "yellow";
 
 export default class SortingVisualizer extends React.Component {
   constructor(props) {
