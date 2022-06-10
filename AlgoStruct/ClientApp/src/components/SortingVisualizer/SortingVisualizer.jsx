@@ -94,8 +94,8 @@ export default class SortingVisualizer extends React.Component {
     return (
       <> <div className="visualizer-background">
      
-  <Dropdown>
-    <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+  <Dropdown className="sorting-algo-dropdown">
+    <Dropdown.Toggle id="dropdown-button-dark-example1" variant="light">
       Sorting Algorithms
     </Dropdown.Toggle>
 
@@ -103,17 +103,16 @@ export default class SortingVisualizer extends React.Component {
       <Dropdown.Item href=""  onClick={() => this.mergeSort()} active>
         Merge Sort
       </Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-      <Dropdown.Divider />
-      <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
+      <Dropdown.Item href="#/action-2"  onClick={() => this.quickSort()}>Quick Sort</Dropdown.Item>
+      <Dropdown.Item href="#/action-3"  onClick={() => this.heapSort()}>Heap Sort</Dropdown.Item>
+      <Dropdown.Item href="#/action-4"  onClick={() => this.bubbleSort()}>Bubble Sort</Dropdown.Item>
     </Dropdown.Menu>
   </Dropdown>
-      <button onClick={() => this.resetArray()}>Create New Array</button>
+      {/* <button onClick={() => this.resetArray()}>Create New Array</button>
         <button onClick={() => this.mergeSort()}>Merge Sort</button>
         <button onClick={() => this.quickSort()}>Quick Sort</button>
         <button onClick={() => this.heapSort()}>Heap Sort</button>
-        <button onClick={() => this.bubbleSort()}>Bubble Sort</button>   
+        <button onClick={() => this.bubbleSort()}>Bubble Sort</button>    */}
      
       <div className="array-container">
         {array.map((value, idx) => (

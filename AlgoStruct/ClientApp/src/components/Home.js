@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <>
       <Sidebar />
+
       <Container id="main-content">
         <h1>AlgoStruct</h1>
         <h5>a Data Structures & Algorithms visualization tool</h5>

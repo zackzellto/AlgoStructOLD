@@ -1,5 +1,6 @@
 .array-container {
   position: relative;
+  margin-top: 30px;
 }
 
 .array-bar {
@@ -7,4 +8,11 @@
   display: inline-block;
   margin: 0 3px;
   max-height: 90%;
+}
+
+.sorting-algo-dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
