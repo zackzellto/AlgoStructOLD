@@ -9,7 +9,10 @@ code {
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
-  background-color: rgba(216, 216, 216, 0.864);
+  background-color: rgb(19, 8, 54);
+  border-radius: 5px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .btn-primary {

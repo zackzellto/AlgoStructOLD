@@ -66,12 +66,12 @@ $screen-sm-min: 576px;
   top: 0;
   left: 0;
   z-index: 20000;
-  background-color: rgb(31, 94, 142);
+  background-color: #8a3cf1;
   color: #fff;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   transition: all 0.3s;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
 }
 
 .sidebar a {

@@ -11,7 +11,9 @@ export default function SidebarExpanded() {
           <div className="menu-btn__burger" />
         </div>
         <div>
-          <h3 className="sidebar-header">AlgoStruct</h3>
+          <Link to="/">
+            <h3 className="sidebar-header">AlgoStruct</h3>
+          </Link>
         </div>
         <ul>
           <div className="sidebar-buttons">
