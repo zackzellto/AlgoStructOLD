@@ -1,18 +1,20 @@
 import React from "react";
+import { FaBalanceScale } from "react-icons/fa";
 import { getMergeSortAnimations } from "../../SortingAlgorithms";
+import QuickSortAlgo from "../Algorithms/Quick-Sort/QuickSortAlgo";
 import ".//SortingVisualizer.css";
 
 // Change this value for the speed of the animations.
-const ANIMATION_SPEED_MS = 1;
+const ANIMATION_SPEED_MS = 3;
 
 // Change this value for the number of bars (value) in the array.
 const NUMBER_OF_ARRAY_BARS = 110;
 
 // This is the main color of the array bars.
-const PRIMARY_COLOR = "turquoise";
+const PRIMARY_COLOR = "#4286f4";
 
 // This is the color of array bars that are being compared throughout the animations.
-const SECONDARY_COLOR = "red";
+const SECONDARY_COLOR = "black";
 
 export default class SortingVisualizer extends React.Component {
   constructor(props) {
@@ -60,15 +62,13 @@ export default class SortingVisualizer extends React.Component {
   }
 
   quickSort() {
-    // We leave it as an exercise to the viewer of this code to implement this method.
+    <QuickSortAlgo />
   }
 
   heapSort() {
-    // We leave it as an exercise to the viewer of this code to implement this method.
   }
 
   bubbleSort() {
-    // We leave it as an exercise to the viewer of this code to implement this method.
   }
 
   // NOTE: This method will only work if your sorting algorithms actually return
