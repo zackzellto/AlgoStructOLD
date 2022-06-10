@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Image } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
 
 export default function SidebarCollapsed() {
