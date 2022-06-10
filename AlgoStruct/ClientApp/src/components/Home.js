@@ -1,17 +1,21 @@
 import React from "react";
 import { Container } from "reactstrap";
-import Sidebar from "./Sidebar/Sidebar";
+import SidebarNav from "./Sidebar/SidebarNav";
 import "./Home.scss";
 import SortingVisualizer from "./SortingVisualizer/SortingVisualizer";
 
 const Home = () => {
   return (
     <>
-      <Sidebar />
+      <SidebarNav />
 
       <Container id="main-content">
         <h1>AlgoStruct</h1>
-        <h5>a Data Structures & Algorithms visualization tool</h5>
+
+        <u>
+          <h5>a Data Structures & Algorithms visualization tool</h5>
+        </u>
+
         <SortingVisualizer></SortingVisualizer>
       </Container>
     </>

@@ -8,7 +8,7 @@ import Register from "./components/Authentication/Register";
 import Algorithms from "./components/Algorithms/Algorithms";
 import DataStructures from "./components/DataStructures/DataStructures";
 import SortingVisualizer from "./components/SortingVisualizer/SortingVisualizer";
-import "./custom.css";
+import "./custom.scss";
 
 export default class App extends Component {
   static displayName = App.name;
