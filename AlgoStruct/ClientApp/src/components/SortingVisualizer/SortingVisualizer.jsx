@@ -1,7 +1,7 @@
 import React from "react";
 import { getMergeSortAnimations } from "../../SortingAlgorithms";
 import QuickSortAlgo from "../Algorithms/Quick-Sort/QuickSortAlgo";
-import Sidebar from "../Sidebar/Sidebar";
+import { Dropdown } from "react-bootstrap";
 import ".//SortingVisualizer.css";
 
 // Change this value for the speed of the animations.
@@ -38,6 +38,7 @@ export default class SortingVisualizer extends React.Component {
   }
 
   mergeSort() {
+    this.resetArray();
     const animations = getMergeSortAnimations(this.state.array);
     for (let i = 0; i < animations.length; i++) {
       const arrayBars = document.getElementsByClassName("array-bar");
@@ -93,12 +94,21 @@ export default class SortingVisualizer extends React.Component {
     return (
       <> <div className="visualizer-background">
      
-      <select>
-        <option value="mergeSort">Merge Sort</option>
-        <option value="quickSort">Quick Sort</option> 
-        <option value="heapSort">Heap Sort</option>
-        <option value="bubbleSort">Bubble Sort</option>
-      </select>
+  <Dropdown>
+    <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+      Sorting Algorithms
+    </Dropdown.Toggle>
+
+    <Dropdown.Menu variant="dark">
+      <Dropdown.Item href=""  onClick={() => this.mergeSort()} active>
+        Merge Sort
+      </Dropdown.Item>
+      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      <Dropdown.Divider />
+      <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown>
       <button onClick={() => this.resetArray()}>Create New Array</button>
         <button onClick={() => this.mergeSort()}>Merge Sort</button>
         <button onClick={() => this.quickSort()}>Quick Sort</button>
