@@ -31,6 +31,15 @@ $breakpoint-xxl: 1600px !default;
 .right-bracket{
     color: rgb(255, 247, 0);
 }
+
+.social-icons{
+    display: flex;
+    height: 20px;
+    width: 30px;
+    position: relative;
+    left: 40px;
+    bottom: 25px;
+}
 #header {
     position: absolute;
     left: 0;

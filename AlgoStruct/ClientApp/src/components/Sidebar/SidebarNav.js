@@ -15,10 +15,11 @@ import {
   FiArrowLeftCircle,
   FiArrowRightCircle,
 } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
+import * as FaIcons from "react-icons/fa";
 import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
 import "../Sidebar/SidebarNav.scss";
+import { Row } from "react-bootstrap";
 
 let CollapsedHeader = () => {
   return (
@@ -43,6 +44,7 @@ const SidebarNav = () => {
   const menuIconClick = () => {
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
+
   return (
     <>
       <div id="header">
@@ -79,6 +81,28 @@ const SidebarNav = () => {
             <Menu iconShape="square">
               <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
             </Menu>
+            <Row>
+              <MenuItem
+                className="social-icons"
+                icon={<FaIcons.FaGithub />}
+              ></MenuItem>
+              <MenuItem
+                className="social-icons"
+                icon={<FaIcons.FaLinkedin />}
+              ></MenuItem>
+              <MenuItem
+                className="social-icons"
+                icon={<FaIcons.FaInstagram />}
+              ></MenuItem>
+              <MenuItem
+                className="social-icons"
+                icon={<FaIcons.FaTwitter />}
+              ></MenuItem>
+              <MenuItem
+                className="social-icons"
+                icon={<FaIcons.FaFacebook />}
+              ></MenuItem>
+            </Row>
           </SidebarFooter>
         </ProSidebar>
       </div>

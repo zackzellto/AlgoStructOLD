@@ -2,7 +2,7 @@ import React from "react";
 import { getMergeSortAnimations } from "../sortingAlgorithms/sortingAlgorithms.js";
 import "./SortingVisualizer.css";
 
-// Change this value for the speed of the animations.
+// Change this value for the speed of the mergeSortAnimations.
 const ANIMATION_SPEED_MS = 1;
 
 // Change this value for the number of bars (value) in the array.
@@ -11,7 +11,7 @@ const NUMBER_OF_ARRAY_BARS = 310;
 // This is the main color of the array bars.
 const PRIMARY_COLOR = "turquoise";
 
-// This is the color of array bars that are being compared throughout the animations.
+// This is the color of array bars that are being compared throughout the mergeSortAnimations.
 const SECONDARY_COLOR = "red";
 
 export default class SortingVisualizer extends React.Component {
@@ -36,12 +36,12 @@ export default class SortingVisualizer extends React.Component {
   }
 
   mergeSort() {
-    const animations = getMergeSortAnimations(this.state.array);
-    for (let i = 0; i < animations.length; i++) {
+    const mergeSortAnimations = getMergeSortAnimations(this.state.array);
+    for (let i = 0; i < mergeSortAnimations.length; i++) {
       const arrayBars = document.getElementsByClassName("array-bar");
       const isColorChange = i % 3 !== 2;
       if (isColorChange) {
-        const [barOneIdx, barTwoIdx] = animations[i];
+        const [barOneIdx, barTwoIdx] = mergeSortAnimations[i];
         const barOneStyle = arrayBars[barOneIdx].style;
         const barTwoStyle = arrayBars[barTwoIdx].style;
         const color = i % 3 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
@@ -51,7 +51,7 @@ export default class SortingVisualizer extends React.Component {
         }, i * ANIMATION_SPEED_MS);
       } else {
         setTimeout(() => {
-          const [barOneIdx, newHeight] = animations[i];
+          const [barOneIdx, newHeight] = mergeSortAnimations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
           barOneStyle.height = `${newHeight}px`;
         }, i * ANIMATION_SPEED_MS);
@@ -59,20 +59,8 @@ export default class SortingVisualizer extends React.Component {
     }
   }
 
-  quickSort() {
-    // We leave it as an exercise to the viewer of this code to implement this method.
-  }
-
-  heapSort() {
-    // We leave it as an exercise to the viewer of this code to implement this method.
-  }
-
-  bubbleSort() {
-    // We leave it as an exercise to the viewer of this code to implement this method.
-  }
-
   // NOTE: This method will only work if your sorting algorithms actually return
-  // the sorted arrays; if they return the animations (as they currently do), then
+  // the sorted arrays; if they return the mergeSortAnimations (as they currently do), then
   // this method will be broken.
   testSortingAlgorithms() {
     for (let i = 0; i < 100; i++) {
