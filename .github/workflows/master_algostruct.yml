@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'AlgoStruct'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5DB419D14C60467E9964B71C8378861E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_689559C04CB1491CBB404E12800267F2 }}
           package: .
